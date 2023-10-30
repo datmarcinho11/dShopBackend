@@ -1,5 +1,6 @@
 ﻿using dShopBackEnd.Data.Configurations;
 using dShopBackEnd.Data.Entities;
+using dShopBackEnd.Data.Extensions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -7,7 +8,7 @@ using Microsoft.Identity.Client;
 
 namespace dShopBackEnd.Data.EF
 {
-    public class ShopDbContext : IdentityDbContext<User, Role, Guid>
+    public class ShopDbContext : IdentityDbContext<AppUser, AppRole, Guid>
     {
         public ShopDbContext(DbContextOptions options) : base(options)
         {
@@ -42,7 +43,7 @@ namespace dShopBackEnd.Data.EF
             modelBuilder.Entity<IdentityUserToken<Guid>>().ToTable("AppUserTokens").HasKey(x => x.UserId);
 
             //Data seeding
-            //modelBuilder.Seed();
+            modelBuilder.Seed();
             //base.OnModelCreating(modelBuilder);
         }
 

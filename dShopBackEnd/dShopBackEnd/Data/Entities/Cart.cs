@@ -13,6 +13,6 @@
 
         public DateTime DateCreated { get; set; }
 
-        public User? User { get; set; }
+        public AppUser? User { get; set; }
     }
 }

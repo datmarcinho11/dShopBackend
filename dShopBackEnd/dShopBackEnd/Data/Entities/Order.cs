@@ -15,6 +15,6 @@ namespace dShopBackEnd.Data.Entities
 
         public List<OrderDetail> OrderDetails { get; set; }
 
-        public User? User { get; set; }
+        public AppUser? User { get; set; }
     }
 }

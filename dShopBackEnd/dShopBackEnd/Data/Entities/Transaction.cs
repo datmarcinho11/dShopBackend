@@ -16,7 +16,7 @@ namespace dShopBackEnd.Data.Entities
 
         public Guid UserId { get; set; }
 
-        public User User { get; set; }
+        public AppUser User { get; set; }
 
     }
 }

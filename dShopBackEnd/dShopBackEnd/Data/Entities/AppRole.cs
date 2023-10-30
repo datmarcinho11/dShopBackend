@@ -2,7 +2,7 @@
 
 namespace dShopBackEnd.Data.Entities
 {
-    public class Role : IdentityRole<Guid>
+    public class AppRole : IdentityRole<Guid>
     {
         public string? Description { get; set; }
     }
